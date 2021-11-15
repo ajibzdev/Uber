@@ -1,0 +1,41 @@
+// @import "../../../../html/Airbnb/scss/;
+@import "../../../css-project-1/scss/abstracts/mixins.scss";
+
+@mixin whiteBg($padding-top, $padding-left) {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    @include centerBlockElement();
+
+    height: 2em;
+    width: 5em;
+    border-radius: 999rem;
+    padding: $padding-top $padding-left;
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    background: rgba(#fff, 0.2);
+  }
+}
+
+@mixin centerFlex($align-items: "", $justify-content: "") {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin pseudoAfter($height: 0, $width: 0, $top: 0, $left: 0) {
+  content: "";
+  height: $height;
+  width: $width;
+  position: absolute;
+  top: $top;
+  left: $left;
+  @content;
+}

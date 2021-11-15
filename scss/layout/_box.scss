@@ -1,0 +1,67 @@
+.box {
+  min-height: 52rem;
+  width: 58rem;
+  background: var(--color-white);
+  margin: 0 auto;
+
+  position: absolute;
+  top: 15rem;
+  left: 12rem;
+
+  box-shadow: 0 1.2rem 4rem rgba(var(--color-black), 0.4);
+
+  // **** BOX NAV **** //
+  &__nav {
+    @include centerFlex(center, space-between);
+
+    height: 13rem;
+    width: 100%;
+    padding: 2rem 5rem;
+
+    border-bottom: 0.8px solid var(--color-grey-light-4);
+    font-size: 1.8rem;
+    font-weight: 500;
+    overflow-y: scroll;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      width: 8rem;
+      font-size: 1.7rem;
+      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+
+        & div {
+          color: var(--color-grey-light-4);
+        }
+      }
+
+      // After Pseudo element for the border
+    }
+
+    &-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__content {
+    padding: 6rem 4rem 4rem 4rem; 
+    text-align: left;
+
+    & span {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+
+  &__header {
+    font-size: 4.5rem;
+    width: 80%;
+  }
+}

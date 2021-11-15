@@ -1,0 +1,21 @@
+.btn {
+    &:link,
+    &:active {
+        display: inline-block;
+        font-size: 1.6rem;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        text-align: center;
+        transition: all .2s ease-out;
+    }
+}
+
+.btn-black {
+    background: var(--color-black);
+    color: var(--color-white);
+
+    &:hover {
+        background: var(--grey-dark-2);
+    }
+}
